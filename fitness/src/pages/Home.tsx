@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { fetchData, options } from "../utils/fetchData";
 import { BodyPartList } from "../components/BodypartList";
+import { fetchAllData } from "../utils/fetchAll";
 
 export const Home: React.FC = () => {
   const [bodyParts, setBodyParts] = useState<string[]>([]);
@@ -19,6 +20,18 @@ export const Home: React.FC = () => {
 
     bodyPartsFetch();
   }, []);
+
+  useEffect(() => {
+    const exercisesDataFetch = async () => {
+      const exercisesData = await fetchAllData("https://exercisedb.p.rapidapi.com/exercises", options);
+
+      console.log(exercisesData)
+
+    }
+
+    exercisesDataFetch();
+  }, [])
+
   return (
     <div>
 
