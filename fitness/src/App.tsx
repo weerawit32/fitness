@@ -2,18 +2,19 @@ import React from "react";
 // import { useEffect, useState } from "react";
 // import { fetchData, options } from "./utils/fetchData";
 import { Home } from "./pages/Home";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
+import { NavigationBar} from './components/NavigationBar';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to my gym</h1>
-      {/* <Routes> */}
-      {/* <Route path="/" element={} /> */}
-      {/* </Routes> */}
-      <Home />
-    </div>
+    <Routes>
+        <Route path="/" element={ <NavigationBar />} >
+          <Route index element={<Home/>}/>
+        </Route>  
+    </Routes>
+  
   );
 }
 
 export default App;
+

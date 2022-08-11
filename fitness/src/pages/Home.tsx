@@ -5,7 +5,7 @@ import { BodyPartList } from "../components/BodypartList";
 
 export const Home: React.FC = () => {
   const [bodyParts, setBodyParts] = useState<string[]>([]);
-
+  const [term, setTerm] = useState('');
   useEffect(() => {
     const bodyPartsFetch = async () => {
       const bodyPartList = await fetchData(
@@ -21,8 +21,12 @@ export const Home: React.FC = () => {
   }, []);
   return (
     <div>
-      {/* {bodyParts} */}
+
       <BodyPartList bodyParts={bodyParts} />
+      <form className="mt-5">
+        <input value={term} onChange={(e) => setTerm(e.target.value)}/>
+        <button>Search</button>
+      </form>
     </div>
   );
 };
