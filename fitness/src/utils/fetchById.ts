@@ -27,3 +27,15 @@ export const fetchById = async (
 
   return data;
 };
+
+// export fetchById ( url: string,
+//     exerciseOptions: exerciseOptionsType) {
+//     return new Promise<innerData>(async (resolve, reject) => {
+//       try {
+//         const { data } = await axios.get(url, exerciseOptions);
+//         return resolve(data);
+//       } catch (error) {
+//         reject(error);
+//       }
+//     });
+//   })

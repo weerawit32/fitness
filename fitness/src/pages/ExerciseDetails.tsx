@@ -6,11 +6,11 @@ import { fetchById } from "../utils/fetchById";
 export {};
 
 export const ExerciseDetails = () => {
-  const [exerciseById, setExerciseById] = useState<innerData | null>({});
+  const [exerciseById, setExerciseById] = useState<innerData>({} as innerData);
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchById = async () => {
+    const fetchByIds = async () => {
       const exerciseById = await fetchById(
         `https://exercisedb.p.rapidapi.com/exercises/exercise/${id}`,
         options
@@ -18,7 +18,7 @@ export const ExerciseDetails = () => {
       setExerciseById(exerciseById);
       console.log(exerciseById);
     };
-    fetchById();
+    fetchByIds();
   }, []);
 
   return (
