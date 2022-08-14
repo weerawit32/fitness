@@ -19,7 +19,7 @@ export const ExerciseDetails = () => {
       console.log(exerciseById);
     };
     fetchByIds();
-  }, []);
+  }, [id]);
 
   return (
     <div>

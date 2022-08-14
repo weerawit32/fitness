@@ -1,16 +1,16 @@
 import { allData } from "../utils/fetchAll";
-
+import Row from "react-bootstrap/Row";
 import { ExerciseCard } from "./ExerciseCard";
 export {};
 
 export const Exercises = ({ exercises }: { exercises: allData }) => {
   return (
     <div className="container-fluid">
-      <div className="row">
+      <Row>
         {exercises.map((exercise) => (
           <ExerciseCard exercise={exercise} />
         ))}
-      </div>
+      </Row>
     </div>
   );
 };
