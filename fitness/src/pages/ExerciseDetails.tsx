@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchAllData, innerData } from "../utils/fetchAll";
 import { options } from "../utils/fetchData";
 import { fetchById } from "../utils/fetchById";
+import { youtubeFetch, youtubeOptions } from "../utils/youtubeApi";
 export {};
 
 export const ExerciseDetails = () => {
@@ -16,10 +17,15 @@ export const ExerciseDetails = () => {
         options
       );
       setExerciseById(exerciseById);
+
+      const youtubeFetchData = youtubeFetch(`https://youtube138.p.rapidapi.com/search/${exerciseById.name}`, youtubeOptions);
+      console.log(youtubeFetchData);
       console.log(exerciseById);
     };
     fetchByIds();
   }, [id]);
+
+
 
   return (
     <div>

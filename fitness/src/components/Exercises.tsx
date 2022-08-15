@@ -8,7 +8,7 @@ export const Exercises = ({ exercises }: { exercises: allData }) => {
     <div className="container-fluid">
       <Row>
         {exercises.map((exercise) => (
-          <ExerciseCard exercise={exercise} />
+          <ExerciseCard key={exercise.id} exercise={exercise} />
         ))}
       </Row>
     </div>

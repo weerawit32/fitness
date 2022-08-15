@@ -27,7 +27,6 @@ export const fetchById = async (
 
   return data;
 };
-
 // export fetchById ( url: string,
 //     exerciseOptions: exerciseOptionsType) {
 //     return new Promise<innerData>(async (resolve, reject) => {
