@@ -87,15 +87,15 @@ export const Home: React.FC = () => {
         );
 
       setExcercises(exercisesData);
-      console.log(selectedBodyPart);
+      // console.log(selectedBodyPart);
     };
 
     bodyPartFetch();
     setPage(1);
   }, [selectedBodyPart]);
 
-  console.log(selectedBodyPart);
-  console.log(renderedExercises);
+  // console.log(selectedBodyPart);
+  // console.log(renderedExercises);
   return (
     <div>
       <BodyPartList bodyParts={bodyParts} selectPart={setSelectedBodyPart} />
@@ -112,10 +112,13 @@ export const Home: React.FC = () => {
       {renderedExercises.length > 0 && (
         <Exercises exercises={renderedExercises} />
       )}
-      <Stack spacing={2}>
-        <Typography>Page: {page}</Typography>
+      {/* <Stack spacing={2} className="mx-auto"> */}
+        {/* <Typography>Page: {page}</Typography> */}
+        <div className="d-flex justify-content-center">
         <Pagination count={maxPageNumber} page={page} onChange={handleChange} />
-      </Stack>
+
+        </div>
+      {/* </Stack> */}
     </div>
   );
 };

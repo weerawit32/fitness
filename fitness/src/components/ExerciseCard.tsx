@@ -8,8 +8,8 @@ export {};
 export const ExerciseCard = ({ exercise }: { exercise: innerData }) => {
   return (
     <>
-      <Col>
-        <Link className="text-decoration-none " to={`exercise/${exercise.id}`}>
+      <div className=" ">
+        <Link className="text-decoration-none me-4 d-block " to={`exercise/${exercise.id}`}>
           <Card
             key={exercise.id}
             className="display-inline my-3"
@@ -26,7 +26,7 @@ export const ExerciseCard = ({ exercise }: { exercise: innerData }) => {
             </Card.Body>
           </Card>
         </Link>
-      </Col>
+      </div>
     </>
   );
 };

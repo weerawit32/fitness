@@ -18,8 +18,8 @@ export const ExerciseDetails = () => {
       );
       setExerciseById(exerciseById);
 
-      // const youtubeFetchData = await youtubeFetch(`https://youtube138.p.rapidapi.com/search?query=${exerciseById.name}`, youtubeOptions);
-      // console.log(youtubeFetchData);
+      const youtubeFetchData = await youtubeFetch(`https://youtube138.p.rapidapi.com/search?query=${exerciseById.name}`, youtubeOptions);
+      console.log(youtubeFetchData);
       console.log(exerciseById);
     };
     fetchByIds();
