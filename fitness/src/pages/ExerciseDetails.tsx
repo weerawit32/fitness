@@ -18,15 +18,15 @@ export const ExerciseDetails = () => {
       );
       setExerciseById(exerciseById);
 
-      const youtubeFetchData = await youtubeFetch
-      (`https://youtube138.p.rapidapi.com/search?query=${exerciseById.name}`, youtubeOptions);
+      const youtubeFetchData = await youtubeFetch(
+        `https://youtube138.p.rapidapi.com/search/?q=${exerciseById.name}`,
+        youtubeOptions
+      );
       console.log(youtubeFetchData);
       console.log(exerciseById);
     };
     fetchByIds();
   }, [id]);
-
-
 
   return (
     <div>
