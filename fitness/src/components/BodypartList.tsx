@@ -1,23 +1,29 @@
 import Button from "react-bootstrap/Button";
 // import { Link } from "react-router-dom";
 // import { BodyPart } from "./BodyPart";
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from "react";
 export {};
 
 type bodyPartListPropsType = {
   bodyParts: string[];
   selectPart: Dispatch<SetStateAction<string>>;
-}
+};
 
-export const BodyPartList = ({ bodyParts, selectPart }:  bodyPartListPropsType ) => {
+export const BodyPartList = ({
+  bodyParts,
+  selectPart,
+}: bodyPartListPropsType) => {
   return (
     <div>
-      Choose your body part target- from bodyPartList
-      <div>
-
-
+      Choose your body part target
+      <div className="my-3">
         {bodyParts.map((bodyPart: string) => (
-          <Button key={bodyPart} onClick={(e) => selectPart(bodyPart)} variant="primary">
+          <Button
+            className="mx-2"
+            key={bodyPart}
+            onClick={(e) => selectPart(bodyPart)}
+            variant="primary"
+          >
             {bodyPart}
           </Button>
         ))}
