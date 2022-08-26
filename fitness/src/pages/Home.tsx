@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { fetchData, options } from "../utils/fetchData";
+import { fetchData, options } from "../utils/fetchAll";
 import { BodyPartList } from "../components/BodypartList";
 import { fetchAllData } from "../utils/fetchAll";
 import { Exercises } from "../components/Exercises";
 import { allData } from "../utils/fetchAll";
-import Typography from "@mui/material/Typography";
+
 import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
+
 
 export const Home: React.FC = () => {
   const [bodyParts, setBodyParts] = useState<string[]>([]);

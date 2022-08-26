@@ -19,14 +19,7 @@ export type innerData = {
 
 export type allData = innerData[];
 
-export const fetchById = async (
-  url: string,
-  exerciseOptions: exerciseOptionsType
-): Promise<innerData> => {
-  const { data } = await axios.get(url, exerciseOptions);
 
-  return data;
-};
 // export fetchById ( url: string,
 //     exerciseOptions: exerciseOptionsType) {
 //     return new Promise<innerData>(async (resolve, reject) => {

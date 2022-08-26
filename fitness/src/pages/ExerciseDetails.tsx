@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchAllData, innerData } from "../utils/fetchAll";
-import { options } from "../utils/fetchData";
-import { fetchById } from "../utils/fetchById";
-import { youtubeFetch, youtubeOptions } from "../utils/youtubeApi";
+import {innerData } from "../utils/fetchAll";
+import { options } from "../utils/fetchAll";
+import { fetchById } from "../utils/fetchAll";
+import { youtubeFetch, youtubeOptions } from "../utils/fetchAll";
 export {};
 
 export const ExerciseDetails = () => {
