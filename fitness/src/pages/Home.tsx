@@ -112,13 +112,14 @@ export const Home: React.FC = () => {
       {renderedExercises.length > 0 && (
         <Exercises exercises={renderedExercises} />
       )}
-      {/* <Stack spacing={2} className="mx-auto"> */}
-        {/* <Typography>Page: {page}</Typography> */}
         <div className="d-flex justify-content-center">
         <Pagination count={maxPageNumber} page={page} onChange={handleChange} />
 
         </div>
-      {/* </Stack> */}
     </div>
   );
 };
+
+{/* </Stack> */}
+{/* <Stack spacing={2} className="mx-auto"> */}
+  {/* <Typography>Page: {page}</Typography> */}
